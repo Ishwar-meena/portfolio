@@ -1,5 +1,5 @@
 async function getProjectsFolders() {
-    let response = await fetch("http://127.0.0.1:3000/assets/Projects/");
+    let response = await fetch("https://ishwar-meena.github.io/portfolio/Assets/Projects/");
     let data = await response.text();
     let div = document.createElement("div");
     div.innerHTML = data;
@@ -17,7 +17,7 @@ async function main() {
     let folder = await getProjectsFolders();
     folder.forEach(async (e) => {
         let cards = document.querySelector(".cards");
-        let jsonData = await fetch(`http://127.0.0.1:3000/assets/Projects/${e}info.json`);
+        let jsonData = await fetch(`https://ishwar-meena.github.io/portfolio/Assets/Projects/${e}info.json`);
         let metaData = await jsonData.json();
         cards.innerHTML += `<div class="card">
                     <img src='Assets/Projects/${e}project.png' alt="${e}">
