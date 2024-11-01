@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Baloo+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo 2", serif;
+}
+
+:root {
+    --bgColor: wheat;
+    --navColor: #D2691E;
+}
+
+body {
+    background-color: var(--bgColor);
+}
+
+header {
+    /* font-family: "Arima", system-ui; */
+    background-color: var(--navColor);
+    color: rgba(245, 245, 245, 0.795);
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    width: 97vw;
+    height: 40px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+nav .humburger, nav .cross {
+    position: fixed;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+    transition: all;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    width: 50%;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: rgb(218, 216, 216);
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.logo {
+    font-size: 30px;
+    margin-left: 8%;
+}
+
+.logo a {
+    color: rgba(245, 245, 245, 0.925);
+    text-decoration: none;
+}
+
+.details {
+    display: flex;
+    height: 80vh;
+    margin: 10px;
+    justify-content: center;
+    /* border: 2px solid red; */
+    box-shadow: 1px 1px 12px 5px gray;
+}
+.auto-type{
+    color: blueviolet;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    width: 70vw;
+    text-align: justify;
+}
+
+.info:nth-child(1) {
+    font-size: 48px;
+}
+
+.info:nth-child(2) {
+    font-size: 40px;
+}
+
+.info :nth-child(3) {
+    font-size: 19px;
+    max-width: 70%;
+}
+
+.profile-img {
+    display: flex;
+    align-items: center;
+    /* border: 2px solid black; */
+    width: 30vw;
+}
+
+.profile-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.btn button {
+    font-size: 18px;
+    padding: 5px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn button:nth-child(1) {
+    color: white;
+    background-color: rgba(252, 4, 4, 0.89);
+}
+
+.btn button:nth-child(1):hover {
+    background-color: rgb(207, 17, 17);
+    transition: ease-in 0.6s;
+}
+
+.btn a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.btn :nth-child(2) {
+    background-color: blueviolet;
+    color: whitesmoke;
+}
+
+.btn :nth-child(2):hover {
+    background-color: rgb(58, 1, 110);
+    transition: ease-in 0.5s;
+}
+
+.skills {
+    /* border: 2px solid red; */
+    /* height: 60vh; */
+    padding-bottom: 10px;
+    box-shadow: 1px 1px 12px 5px gray;
+    margin: 10px;
+}
+
+.skills>h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding: 20px 0;
+    font-family: "Playwrite GB S", cursive;
+    font-size: 40px;
+    color: whitesmoke;
+    text-shadow: 3px 2px 3px red,
+        -1px -2px 3px orangered;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: justify;
+    height: 350px;
+    width: 270px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 12px 1px rgb(167, 165, 165);
+}
+
+.skills img {
+    height: 130px;
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 9px gray;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+
+.card:hover {
+    background-color: rgba(248, 162, 1, 0.219);
+    box-shadow: 1px 1px 19px 1px rgba(218, 120, 85, 0.527);
+    transition: ease-in .4s;
+}
+
+.projects img {
+    height: 100px;
+    width: 100px;
+}
+
+footer {
+    background-color: #2C3E50;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.social-media img {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+/* for skills html */
+.skills-container {
+    margin: 5% 0 0 5%;
+}
+
+.skills-container h4 {
+    display: inline;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.skills-container ul li {
+    margin-left: 8%;
+}
+
+.skill>div {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.skill span {
+    font-size: 17px;
+}
+
+/* for project html  */
+.project .img {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.project .img div {
+    height: 80vh;
+    width: 90vw;
+    background-image: url("Assets/desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.project>h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    font-size: 32px;
+    color: whitesmoke;
+    text-shadow: 3px 2px 3px red,
+        -1px -2px 3px orangered;
+}
+
+.project>span {
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.project p {
+    width: 90vw;
+    margin-left: 5vw;
+    text-align: justify;
+}
+
+.project li {
+    margin-left: 50px;
+    list-style-type: disc;
+}
+
+.project li>span:first-child {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media (max-width: 762px) {
+    .details{
+        height: 135vh;
+        flex-direction: column-reverse;
+    }
+    .profile-img{
+        width: 100%;
+        justify-content: center;
+    }
+    .info{
+        width: 90vw;
+    }
+    .info :nth-child(3) {
+        max-width: 80%;
+    }
+}
+
+/* for mobiles  */
+@media (max-width:500px){
+    .details{
+        height: 120vh;
+    }
+    nav .humburger, nav .cross {
+        display: block;
+    }
+    nav ul{
+        flex-direction: column;
+        height: 1px;
+        width: 30%;
+        padding: 10px;
+        display: none;
+    }
+    nav ul li{
+        background-color: rgba(102, 51, 153, 0.856);
+        padding: 5px 10px;
+    }
+    .info:nth-child(1) {
+        font-size: 32px;
+    }    
+    .info:nth-child(2) {
+        font-size: 24px;
+    }
+
+
+}
