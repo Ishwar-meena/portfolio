@@ -1,35 +1,3 @@
-async function getProjectsFolders() {
-    let response = await fetch("https://ishwar-meena.github.io/portfolio/Assets/Projects/");
-    let data = await response.text();
-    let div = document.createElement("div");
-    div.innerHTML = data;
-    let temp = div.querySelectorAll("a")
-    let folders = [];
-    temp.forEach((e) => {
-        if (e.innerText != "../") {
-            folders.push(e.innerText);
-        }
-    })
-    return folders;
-}
-
-async function main() {
-    let folder = await getProjectsFolders();
-    folder.forEach(async (e) => {
-        let cards = document.querySelector(".cards");
-        let jsonData = await fetch(`https://ishwar-meena.github.io/portfolio/Assets/Projects/${e}info.json`);
-        let metaData = await jsonData.json();
-        cards.innerHTML += `<div class="card">
-                    <img src='Assets/Projects/${e}project.png' alt="${e}">
-                    <a href='${metaData.link}'>
-                        <p>${metaData.description}
-                        </p>
-                    </a>
-                </div>`
-    })
-
-}
-
 let humburgerIcon = document.getElementById("humburger-icon");
 let crossIcon = document.getElementById("cross-icon");
 let navMenu = document.querySelector("nav ul");
@@ -45,7 +13,3 @@ crossIcon.addEventListener("click", () => {
     crossIcon.style.display = "none";
     humburgerIcon.style.display = "block";
 });
-
-
-
-main();
